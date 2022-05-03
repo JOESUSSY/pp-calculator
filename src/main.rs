@@ -11,6 +11,15 @@ impl Dick
     {   
         self.dick_string = format!("8{}D{}", "=".repeat(self.dick_length), "-".repeat(self.cum_distance));
     }
+    fn new_dick(length: usize, coom_distance: usize) -> Dick
+    {
+        Dick
+        {
+            dick_length: length,
+            cum_distance: coom_distance,
+            dick_string: String::from("")
+        }
+    }
     fn equal_dick(bruh: usize) -> Dick
     {
         Dick 
@@ -23,24 +32,10 @@ impl Dick
 }
 fn main()
 {
-    let mut cuck = Dick
-    {
-        dick_length: 0,
-        cum_distance: 1,
-        dick_string: String::from("")
-    };
+    let mut cuck = Dick::new_dick(0, 1);
     let mut soyboy = Dick::equal_dick(5);
-    let mut chad = Dick
-    {
-        dick_length: 420,
-        cum_distance: 911,
-        dick_string: String::from("")
-    };
-    let mut gigachad = Dick {
-        dick_length: 911,
-        cum_distance: 0,
-        dick_string: String::from("")
-    };
+    let mut chad = Dick::new_dick(420, 911);
+    let mut gigachad = Dick::new_dick(911, 0);
 
     cuck.calc_string();
     soyboy.calc_string();
